@@ -427,4 +427,4 @@ El frontend ahora incluye mensajes detallados en la consola:
 
 ---
 
-*Reporte generado el 2025-10-03 por Claude Code*
+*Reporte generado el 2025-10-03*
