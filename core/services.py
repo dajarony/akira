@@ -24,7 +24,7 @@ Scan results: {json.dumps(scan_data, indent=2, default=str)}"""
     async def health_check(self) -> Dict[str, Any]:
         try:
             # Intenta una llamada simple a la API para verificar la conectividad y la clave
-            await self.client.models.list()
+            self.client.models.list()
             return {"status": "healthy", "message": "OpenAI service is operational."}
         except openai.AuthenticationError:
             return {"status": "unhealthy", "message": "OpenAI authentication failed. Check API key."}
