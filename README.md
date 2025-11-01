@@ -154,7 +154,7 @@ Akira SASE is built with security as the foundation:
 ```bash
 git clone https://github.com/dajarony/akira.git
 cd akira
-python setup.py  # Interactive setup wizard
+python scripts/setup.py  # Interactive setup wizard
 ```
 
 ### 2. Configure
@@ -231,17 +231,33 @@ akira/
 │   ├── test_offense.py             # Offensive module tests
 │   └── test_defense.py             # Defensive module tests
 │
+├── docs/                           # 📚 Documentation
+│   ├── SECURITY.md                 # Security policies
+│   ├── DEPLOYMENT.md               # Deployment guide
+│   ├── DEPLOYMENT_INSTRUCTIONS.md  # Step-by-step deployment
+│   ├── CHANGELOG.md                # Version history
+│   ├── ROADMAP.md                  # Future plans
+│   └── README.md                   # Documentation index
+│
+├── scripts/                        # 🔧 Automation scripts
+│   ├── setup.py                    # Interactive setup wizard
+│   ├── deploy_to_github.sh         # GitHub deployment (Linux/Mac)
+│   ├── deploy_to_github.bat        # GitHub deployment (Windows)
+│   ├── run_akira.py                # Run script
+│   └── README.md                   # Scripts documentation
+│
+├── config/                         # ⚙️ Configuration files
+│   ├── .env.example                # Environment template
+│   ├── firebase-credentials.example.json  # Firebase template
+│   ├── Dockerfile                  # Container definition
+│   └── README.md                   # Config documentation
+│
 ├── .github/                        # GitHub Actions CI/CD
 │   └── workflows/
 │       └── ci-cd.yml               # Automated testing & deployment
 │
 ├── main.py                         # Application entry point
-├── Dockerfile                      # Container definition
-├── docker-compose.yml              # Multi-container orchestration
 ├── requirements.txt                # Python dependencies
-├── .env.example                    # Environment template
-├── SECURITY.md                     # Security documentation
-├── DEPLOYMENT.md                   # Deployment guide
 └── README.md                       # This file
 ```
 
@@ -264,8 +280,11 @@ akira/
 ## 📚 Documentation
 
 ### Core Documents
-- [SECURITY.md](SECURITY.md) - Security policies and best practices
-- [DEPLOYMENT.md](DEPLOYMENT.md) - Production deployment guide
+- [SECURITY.md](docs/SECURITY.md) - Security policies and best practices
+- [DEPLOYMENT.md](docs/DEPLOYMENT.md) - Production deployment guide
+- [DEPLOYMENT_INSTRUCTIONS.md](docs/DEPLOYMENT_INSTRUCTIONS.md) - Step-by-step setup
+- [CHANGELOG.md](docs/CHANGELOG.md) - Version history and release notes
+- [ROADMAP.md](docs/ROADMAP.md) - Future features and plans
 - [API Documentation](http://localhost:8000/docs) - Interactive API docs (Swagger UI)
 
 ### Quick References
@@ -273,6 +292,7 @@ akira/
 - [Rate Limiting](#rate-limiting)
 - [Target Authorization](#target-authorization)
 - [Examples & Tutorials](#examples)
+- [Documentation Index](docs/README.md) - Full documentation directory
 
 ---
 
