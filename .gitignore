@@ -400,9 +400,8 @@ site/
 # Socket files
 *.sock
 
-# Core dumps
-core
-core.*
+# Core dumps (Unix core files, not the core/ directory)
+core.[0-9]*
 
 # ===================================
 # PROJECT SPECIFIC EXCLUSIONS
