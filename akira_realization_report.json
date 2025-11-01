@@ -1,0 +1,141 @@
+{
+  "installation_log": [
+    {
+      "action": "Admin Rights Check",
+      "success": 0,
+      "details": "Limited - some features may not work",
+      "system": "windows"
+    },
+    {
+      "action": "Package: python-nmap",
+      "success": true,
+      "details": "Network scanning",
+      "system": "windows"
+    },
+    {
+      "action": "Package: shodan",
+      "success": true,
+      "details": "Shodan API integration",
+      "system": "windows"
+    },
+    {
+      "action": "Package: requests[security]",
+      "success": true,
+      "details": "Enhanced HTTP security",
+      "system": "windows"
+    },
+    {
+      "action": "Package: scapy",
+      "success": true,
+      "details": "Packet manipulation",
+      "system": "windows"
+    },
+    {
+      "action": "Package: netaddr",
+      "success": true,
+      "details": "Network address manipulation",
+      "system": "windows"
+    },
+    {
+      "action": "Package: psutil",
+      "success": true,
+      "details": "System monitoring",
+      "system": "windows"
+    },
+    {
+      "action": "Package: python-whois",
+      "success": true,
+      "details": "WHOIS lookups",
+      "system": "windows"
+    },
+    {
+      "action": "Package: dnspython",
+      "success": true,
+      "details": "DNS operations",
+      "system": "windows"
+    },
+    {
+      "action": "Package: python-virustotal-api",
+      "success": false,
+      "details": "Failed: Command '['C:\\\\Users\\\\gatak\\\\Desktop\\\\akira\\\\venv\\",
+      "system": "windows"
+    },
+    {
+      "action": "Package: paramiko",
+      "success": true,
+      "details": "SSH operations",
+      "system": "windows"
+    },
+    {
+      "action": "Nmap Installation",
+      "success": false,
+      "details": "Manual installation required - Download from https://nmap.org/download.html",
+      "system": "windows"
+    },
+    {
+      "action": "Configuration Template",
+      "success": true,
+      "details": ".env.template created",
+      "system": "windows"
+    },
+    {
+      "action": "Security Tools Guide",
+      "success": true,
+      "details": "Installation guide created",
+      "system": "windows"
+    },
+    {
+      "action": "Nmap Binary",
+      "success": false,
+      "details": "Not found",
+      "system": "windows"
+    },
+    {
+      "action": "Python-Nmap",
+      "success": true,
+      "details": "Available",
+      "system": "windows"
+    },
+    {
+      "action": "Shodan Library",
+      "success": true,
+      "details": "Available",
+      "system": "windows"
+    },
+    {
+      "action": "Scapy",
+      "success": true,
+      "details": "Available",
+      "system": "windows"
+    },
+    {
+      "action": "PSUtil",
+      "success": true,
+      "details": "Available",
+      "system": "windows"
+    },
+    {
+      "action": "DNS Python",
+      "success": true,
+      "details": "Available",
+      "system": "windows"
+    },
+    {
+      "action": "Python Whois",
+      "success": true,
+      "details": "Available",
+      "system": "windows"
+    }
+  ],
+  "capabilities": {
+    "nmap": false,
+    "python_nmap": true,
+    "shodan": true,
+    "scapy": true,
+    "psutil": true,
+    "dns": true,
+    "whois": true
+  },
+  "success_rate": 80.95238095238095,
+  "real_percentage": 85.71428571428571
+}

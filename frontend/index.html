@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🛡️⚔️ Akira SASE Cyberwar MVP</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1>🛡️⚔️ AKIRA SASE CYBERWAR MVP</h1>
+      </div>
+      <div class="header-right">
+        <span class="user-info">👤 Admin</span>
+        <span class="notifications">🔔 <span class="badge">3</span></span>
+        <button class="settings-btn">⚙️</button>
+        <button class="logout-btn">🚪</button>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="dashboard">📊 Dashboard</button>
+      <button class="tab-btn" data-tab="redteam">🔴 Red Team</button>
+      <button class="tab-btn" data-tab="blueteam">🔵 Blue Team</button>
+      <button class="tab-btn" data-tab="ai">🧠 AI Intelligence</button>
+      <button class="tab-btn" data-tab="logs">📝 Logs</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard Tab -->
+      <div id="dashboard" class="tab-content active">
+        <div class="dashboard-grid">
+          <!-- Threat Overview -->
+          <div class="card threat-overview">
+            <h3>📊 THREAT OVERVIEW</h3>
+            <div class="threat-stats">
+              <div class="stat critical">
+                🔴 CRITICAL: <span id="critical-count">2</span>
+              </div>
+              <div class="stat high">
+                🟡 HIGH: <span id="high-count">5</span>
+              </div>
+              <div class="stat medium">
+                🟢 MEDIUM: <span id="medium-count">12</span>
+              </div>
+              <div class="stat low">⚪ LOW: <span id="low-count">8</span></div>
+            </div>
+            <div class="threat-trend">
+              📈 Threat Trend: <span class="trend-up">↗️ +15% (24h)</span>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card quick-actions">
+            <h3>🎯 QUICK ACTIONS</h3>
+            <div class="action-buttons">
+              <button class="action-btn nmap" onclick="showNmapModal()">
+                🌐 Nmap Scan
+              </button>
+              <button class="action-btn osint" onclick="showOsintModal()">
+                🔍 OSINT Lookup
+              </button>
+              <button class="action-btn honeypot" onclick="showHoneypotModal()">
+                🛡️ Deploy Honeypot
+              </button>
+              <button class="action-btn block" onclick="showBlockModal()">
+                🚫 Block IP
+              </button>
+            </div>
+          </div>
+
+          <!-- Red Team Status -->
+          <div class="card redteam-status">
+            <h3>🔴 RED TEAM STATUS</h3>
+            <div class="status-grid">
+              <div class="status-item">
+                🎯 Active Scans: <span id="active-scans">3</span>
+              </div>
+              <div class="status-item">
+                🔍 OSINT Jobs: <span id="osint-jobs">2</span>
+              </div>
+              <div class="status-item">
+                ⚡ Exploits Found: <span id="exploits-found">12</span>
+              </div>
+              <div class="status-item">
+                📊 Success Rate: <span id="success-rate">87%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blue Team Status -->
+          <div class="card blueteam-status">
+            <h3>🔵 BLUE TEAM STATUS</h3>
+            <div class="status-grid">
+              <div class="status-item">
+                🛡️ Firewall Rules: <span id="firewall-rules">47</span>
+              </div>
+              <div class="status-item">
+                🍯 Honeypots: <span id="honeypots">5 active</span>
+              </div>
+              <div class="status-item">
+                🚫 IPs Blocked: <span id="blocked-ips">23</span>
+              </div>
+              <div class="status-item">
+                🤖 AI Alerts: <span id="ai-alerts">8 today</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Threat Intelligence -->
+          <div class="card ai-intelligence">
+            <h3>🧠 AI THREAT INTELLIGENCE</h3>
+            <div class="threat-alert">
+              <div class="alert-header">
+                🚨 LATEST THREAT:
+                <span class="threat-type"
+                  >SQL Injection from 192.168.1.100</span
+                >
+              </div>
+              <div class="ai-analysis">
+                🤖 AI ANALYSIS: "Coordinated attack pattern detected. Recommend
+                immediate IP blocking and honeypot deployment on port 3306"
+              </div>
+              <div class="alert-footer">
+                <span class="confidence">📊 CONFIDENCE: 94%</span>
+                <span class="detected">⏱️ DETECTED: 2 min ago</span>
+                <span class="auto-blocked">🎯 AUTO-BLOCKED: ✅</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Red Team Tab -->
+      <div id="redteam" class="tab-content">
+        <div class="redteam-grid">
+          <!-- Nmap Scanner -->
+          <div class="card nmap-scanner">
+            <h3>🌐 NMAP SCANNER</h3>
+            <div class="scanner-form">
+              <div class="form-group">
+                <label>Target:</label>
+                <input
+                  type="text"
+                  id="nmap-target"
+                  placeholder="192.168.1.0/24"
+                  value="127.0.0.1"
+                />
+              </div>
+              <div class="form-group">
+                <label>Ports:</label>
+                <input
+                  type="text"
+                  id="nmap-ports"
+                  placeholder="1-1000,3389,22,80,443"
+                  value="80,443,22"
+                />
+              </div>
+              <div class="form-group">
+                <label>Type:</label>
+                <select id="nmap-type">
+                  <option value="basic">Basic Scan</option>
+                  <option value="aggressive">Aggressive Scan</option>
+                  <option value="stealth">Stealth Scan</option>
+                </select>
+              </div>
+              <button class="scan-btn" onclick="startNmapScan()">
+                🚀 START SCAN
+              </button>
+              <div class="scan-status" id="nmap-status">🟢 Ready</div>
+            </div>
+          </div>
+
+          <!-- OSINT Collector -->
+          <div class="card osint-collector">
+            <h3>🔍 OSINT COLLECTOR</h3>
+            <div class="osint-form">
+              <div class="form-group">
+                <label>Target:</label>
+                <input
+                  type="text"
+                  id="osint-target"
+                  placeholder="example.com"
+                  value="example.com"
+                />
+              </div>
+              <div class="form-group">
+                <label>Type:</label>
+                <select id="osint-type">
+                  <option value="domain">Domain Analysis</option>
+                  <option value="ip">IP Analysis</option>
+                  <option value="email">Email Analysis</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Sources:</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" checked /> DNS</label>
+                  <label><input type="checkbox" checked /> WHOIS</label>
+                  <label><input type="checkbox" checked /> Subdomains</label>
+                </div>
+              </div>
+              <button class="scan-btn" onclick="startOsintScan()">
+                🔍 START OSINT
+              </button>
+              <div class="scan-status" id="osint-status">🟢 Ready</div>
+            </div>
+          </div>
+
+          <!-- Scan Results -->
+          <div class="card scan-results">
+            <h3>📊 SCAN RESULTS</h3>
+            <div class="results-container" id="scan-results">
+              <div class="result-item">🎯 127.0.0.1:22 SSH - Open</div>
+              <div class="result-item">🎯 127.0.0.1:80 HTTP - Open</div>
+              <div class="result-item">⚠️ 127.0.0.1:3389 RDP - Filtered</div>
+              <div class="result-item">🔴 127.0.0.1:445 SMB - Vulnerable</div>
+            </div>
+            <div class="results-actions">
+              <button class="btn-secondary">📄 Full Report</button>
+              <button class="btn-secondary">💾 Export</button>
+            </div>
+          </div>
+
+          <!-- Exploit Launcher -->
+          <div class="card exploit-launcher">
+            <h3>⚡ EXPLOIT LAUNCHER</h3>
+            <div class="exploit-list">
+              <div class="exploit-item">
+                <label><input type="checkbox" /> SQL Injection Test</label>
+              </div>
+              <div class="exploit-item">
+                <label><input type="checkbox" /> XSS Verification</label>
+              </div>
+              <div class="exploit-item">
+                <label><input type="checkbox" /> SSH Brute Force</label>
+              </div>
+            </div>
+            <div class="exploit-options">
+              <label><input type="checkbox" checked /> Verification Only</label>
+            </div>
+            <button class="exploit-btn" onclick="launchExploits()">
+              🔥 LAUNCH EXPLOITS
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blue Team Tab -->
+      <div id="blueteam" class="tab-content">
+        <div class="blueteam-grid">
+          <!-- Firewall Manager -->
+          <div class="card firewall-manager">
+            <h3>🛡️ FIREWALL MANAGER</h3>
+            <div class="firewall-stats">
+              <div class="stat-item">
+                Active Rules: <span id="fw-rules">47</span>
+              </div>
+              <div class="stat-item">
+                Blocked IPs: <span id="fw-blocked">23</span>
+              </div>
+            </div>
+            <div class="quick-block">
+              <label>Quick Block IP:</label>
+              <input type="text" id="block-ip" placeholder="192.168.1.100" />
+              <button class="block-btn" onclick="blockIP()">🚫 BLOCK</button>
+            </div>
+            <button class="btn-secondary" onclick="showFirewallRules()">
+              📋 View All Rules
+            </button>
+          </div>
+
+          <!-- Honeypot Control -->
+          <div class="card honeypot-control">
+            <h3>🍯 HONEYPOT CONTROL</h3>
+            <div class="honeypot-list">
+              <div class="honeypot-item">
+                🐝 SSH Honeypot :2222 <span class="status online">🟢</span>
+              </div>
+              <div class="honeypot-item">
+                🕸️ HTTP Honeypot :8080 <span class="status online">🟢</span>
+              </div>
+              <div class="honeypot-item">
+                📁 FTP Honeypot :2121 <span class="status online">🟢</span>
+              </div>
+            </div>
+            <div class="honeypot-stats">
+              <div>Connections Today: <span id="hp-connections">47</span></div>
+              <div>
+                Credentials Captured: <span id="hp-credentials">12</span>
+              </div>
+            </div>
+            <div class="honeypot-actions">
+              <button class="btn-primary" onclick="deployHoneypot()">
+                🚀 Deploy New
+              </button>
+              <button class="btn-secondary" onclick="showHoneypotStats()">
+                📊 Stats
+              </button>
+            </div>
+          </div>
+
+          <!-- AI Threat Detector -->
+          <div class="card ai-detector">
+            <h3>🤖 AI THREAT DETECTOR</h3>
+            <div class="ai-status">
+              <div class="status-item">
+                🧠 AI Status: <span class="status online">🟢 Online</span>
+              </div>
+              <div class="status-item">
+                📊 Threats Analyzed: <span id="threats-analyzed">1,247</span>
+              </div>
+              <div class="status-item">
+                ⚡ Response Time: <span id="response-time">0.3s</span>
+              </div>
+            </div>
+            <div class="ai-options">
+              <label
+                ><input type="checkbox" checked /> Auto-Response Enabled</label
+              >
+            </div>
+            <div class="ai-actions">
+              <button class="btn-primary" onclick="analyzeLogs()">
+                📝 Analyze Logs
+              </button>
+              <button class="btn-secondary" onclick="configureAI()">
+                ⚙️ Configure
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Threats -->
+          <div class="card active-threats">
+            <h3>🚨 ACTIVE THREATS</h3>
+            <div class="threat-list" id="threat-list">
+              <div class="threat-item critical">
+                🔴 192.168.1.100 - SSH Brute Force
+              </div>
+              <div class="threat-item high">🟡 10.0.0.50 - Port Scan</div>
+              <div class="threat-item critical">
+                🔴 172.16.1.5 - SQL Injection
+              </div>
+              <div class="threat-item high">🟡 192.168.2.10 - XSS Attempt</div>
+            </div>
+            <div class="threat-actions">
+              <button class="btn-secondary" onclick="showThreatDetails()">
+                🔍 Details
+              </button>
+              <button class="btn-danger" onclick="blockAllThreats()">
+                🚫 Block All
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI Intelligence Tab -->
+      <div id="ai" class="tab-content">
+        <div class="ai-grid">
+          <div class="card ai-dashboard">
+            <h3>🧠 AI THREAT INTELLIGENCE DASHBOARD</h3>
+            <div class="ai-metrics">
+              <div class="metric">
+                <h4>Threats Processed Today</h4>
+                <div class="metric-value">1,247</div>
+              </div>
+              <div class="metric">
+                <h4>AI Confidence Average</h4>
+                <div class="metric-value">94.2%</div>
+              </div>
+              <div class="metric">
+                <h4>Auto-Responses Triggered</h4>
+                <div class="metric-value">23</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logs Tab -->
+      <div id="logs" class="tab-content">
+        <div class="logs-container">
+          <div class="card logs-viewer">
+            <h3>📝 SYSTEM LOGS</h3>
+            <div class="log-controls">
+              <select id="log-level">
+                <option value="all">All Levels</option>
+                <option value="error">Error</option>
+                <option value="warning">Warning</option>
+                <option value="info">Info</option>
+              </select>
+              <button class="btn-secondary" onclick="refreshLogs()">
+                🔄 Refresh
+              </button>
+              <button class="btn-secondary" onclick="clearLogs()">
+                🗑️ Clear
+              </button>
+            </div>
+            <div class="log-content" id="log-content">
+              <div class="log-entry error">
+                [2024-07-22 13:36:30] ERROR: Failed login attempt from
+                192.168.1.100
+              </div>
+              <div class="log-entry warning">
+                [2024-07-22 13:35:15] WARNING: Multiple port scan attempts
+                detected
+              </div>
+              <div class="log-entry info">
+                [2024-07-22 13:34:22] INFO: Honeypot deployed on port 2222
+              </div>
+              <div class="log-entry error">
+                [2024-07-22 13:33:45] ERROR: SQL injection attempt blocked
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Status Bar -->
+    <footer class="status-bar">
+      <div class="status-left">
+        <span class="status-item">🟢 System Online</span>
+        <span class="status-item">🔗 API Connected</span>
+        <span class="status-item">🧠 AI Active</span>
+      </div>
+      <div class="status-right">
+        <span class="status-item"
+          >⏱️ Last Update: <span id="last-update">13:36:30</span></span
+        >
+        <span class="status-item">📊 CPU: 23%</span>
+        <span class="status-item">💾 RAM: 45%</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

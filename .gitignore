@@ -1,0 +1,469 @@
+﻿# Akira SASE Cyberwar MVP - .gitignore
+
+# ===================================
+# SECURITY & CREDENTIALS
+# ===================================
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.staging
+.env.development
+
+# API Keys and credentials
+**/api_keys.json
+**/credentials.json
+firebase-credentials.json
+firebase-admin-sdk.json
+openai-key.txt
+secrets/
+keys/
+certs/
+
+# Configuration files with sensitive data
+config/production.json
+config/staging.json
+**/sensitive_config.*
+
+# ===================================
+# PYTHON
+# ===================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ===================================
+# AKIRA SPECIFIC
+# ===================================
+# Logs and data directories
+logs/
+*.log
+*.log.*
+log_*.txt
+
+# Data and temporary files
+data/
+temp/
+tmp/
+cache/
+uploads/
+downloads/
+backups/
+
+# Scan results and reports
+scan_results/
+osint_results/
+exploit_results/
+threat_reports/
+nmap_outputs/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Honeypot captured data
+honeypot_data/
+captured_credentials/
+attack_logs/
+
+# Firewall rules backup
+firewall_backup/
+iptables_backup/
+
+# AI analysis cache
+ai_cache/
+gpt_responses/
+
+# Test artifacts
+test_results/
+test_reports/
+test_data/
+
+# ===================================
+# DEVELOPMENT TOOLS
+# ===================================
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===================================
+# OPERATING SYSTEMS
+# ===================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===================================
+# DOCKER & CONTAINERS
+# ===================================
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# Kubernetes
+*.kubeconfig
+
+# ===================================
+# CLOUD & DEPLOYMENT
+# ===================================
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+
+# Azure
+.azure/
+
+# Heroku
+.heroku/
+
+# ===================================
+# MONITORING & ANALYTICS
+# ===================================
+# Monitoring data
+monitoring/
+metrics/
+analytics/
+
+# Performance profiling
+*.prof
+*.pstats
+
+# ===================================
+# SECURITY TOOLS OUTPUT
+# ===================================
+# Nmap outputs
+*.nmap
+*.xml
+*.gnmap
+
+# Vulnerability scanners
+*.nessus
+*.xml
+
+# Penetration testing tools
+*.msf
+*.rc
+metasploit/
+
+# OSINT tools output
+osint_output/
+recon_data/
+
+# ===================================
+# DOCUMENTATION
+# ===================================
+# Generated documentation
+docs/build/
+docs/_build/
+site/
+
+# ===================================
+# MISC
+# ===================================
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.rar
+*.7z
+
+# Temporary files
+*.tmp
+*.temp
+
+# Lock files
+*.lock
+
+# PID files
+*.pid
+
+# Socket files
+*.sock
+
+# Core dumps
+core
+core.*
+
+# ===================================
+# PROJECT SPECIFIC EXCLUSIONS
+# ===================================
+# Exclude specific test files that might contain sensitive data
+test_credentials.py
+test_secrets.py
+
+# Exclude local configuration overrides
+local_config.py
+dev_settings.py
+
+# Exclude any files with 'secret' or 'private' in the name
+*secret*
+*private*
+*confidential*
+
+# Exclude compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Exclude large data files
+*.csv
+*.json.gz
+*.parquet
+
+# ===================================
+# KEEP THESE FILES (NEGATIVE PATTERNS)
+# ===================================
+# Keep example configuration files
+!.env.example
+!config.example.json
+!firebase-credentials.example.json
+
+# Keep empty directories with .gitkeep
+!.gitkeep
+
+# Keep important documentation
+!README*.md
+!CHANGELOG.md
+!LICENSE
+!CONTRIBUTING.md
+
+# Keep requirements files
+!requirements*.txt
+!Pipfile
+!pyproject.toml
+
+# Keep Docker files
+!Dockerfile*
+!docker-compose*.yml
+!.dockerignore
+
+# Keep CI/CD files
+!.github/
+!.gitlab-ci.yml
+!.travis.yml
+!.circleci/
+
+# ===================================
+# END OF .gitignore
+# ===================================

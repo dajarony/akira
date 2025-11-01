@@ -1,0 +1,824 @@
+/* Akira SASE Cyberwar MVP - Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #00ff00;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid #00ff00;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    color: #00ff00;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #00ff00;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00ff00; }
+    to { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info, .notifications {
+    color: #00ff00;
+    font-size: 1rem;
+}
+
+.badge {
+    background: #ff0000;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.settings-btn, .logout-btn {
+    background: transparent;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.settings-btn:hover, .logout-btn:hover {
+    background: #00ff00;
+    color: #000;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+/* Navigation */
+.nav-tabs {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0 2rem;
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #333;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.tab-btn:hover {
+    color: #00ff00;
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.tab-btn.active {
+    color: #00ff00;
+    border-bottom-color: #00ff00;
+    background: rgba(0, 255, 0, 0.1);
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+    min-height: calc(100vh - 200px);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+.card h3 {
+    color: #00ff00;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.dashboard-grid .ai-intelligence {
+    grid-column: 1 / -1;
+}
+
+/* Threat Overview */
+.threat-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.stat.critical { background: rgba(255, 0, 0, 0.2); border: 1px solid #ff0000; }
+.stat.high { background: rgba(255, 255, 0, 0.2); border: 1px solid #ffff00; }
+.stat.medium { background: rgba(0, 255, 0, 0.2); border: 1px solid #00ff00; }
+.stat.low { background: rgba(255, 255, 255, 0.2); border: 1px solid #ffffff; }
+
+.threat-trend {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.trend-up {
+    color: #ff6666;
+    font-weight: bold;
+}
+
+/* Quick Actions */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.action-btn {
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.action-btn:hover {
+    background: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Status Grids */
+.status-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.status-item {
+    padding: 0.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+/* AI Intelligence */
+.ai-intelligence {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 50, 0, 0.9));
+    border: 2px solid #00ff00;
+}
+
+.threat-alert {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.alert-header {
+    color: #ff6666;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.ai-analysis {
+    color: #00ff00;
+    margin: 0.5rem 0;
+    font-style: italic;
+}
+
+.alert-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Red Team Grid */
+.redteam-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Blue Team Grid */
+.blueteam-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    color: #00ff00;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #333;
+    color: #00ff00;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #00ff00;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Buttons */
+.scan-btn, .exploit-btn, .block-btn {
+    background: linear-gradient(45deg, #ff0000, #ff6600);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.scan-btn:hover, .exploit-btn:hover, .block-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #00ff00, #00cc00);
+    border: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-danger:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Scan Status */
+.scan-status {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Results */
+.results-container {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.result-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 3px solid #00ff00;
+    border-radius: 0 4px 4px 0;
+}
+
+.results-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Exploit List */
+.exploit-list {
+    margin-bottom: 1rem;
+}
+
+.exploit-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 100, 0, 0.1);
+    border-radius: 4px;
+}
+
+.exploit-options {
+    margin-bottom: 1rem;
+}
+
+/* Firewall Manager */
+.firewall-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item {
+    padding: 0.5rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.quick-block {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.quick-block input {
+    flex: 1;
+}
+
+/* Honeypot Control */
+.honeypot-list {
+    margin-bottom: 1rem;
+}
+
+.honeypot-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 165, 0, 0.1);
+    border-radius: 4px;
+}
+
+.status.online {
+    color: #00ff00;
+}
+
+.honeypot-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.honeypot-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* AI Detector */
+.ai-status {
+    margin-bottom: 1rem;
+}
+
+.ai-options {
+    margin-bottom: 1rem;
+}
+
+.ai-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Active Threats */
+.threat-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.threat-item {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-left: 3px solid;
+}
+
+.threat-item.critical {
+    background: rgba(255, 0, 0, 0.2);
+    border-left-color: #ff0000;
+}
+
+.threat-item.high {
+    background: rgba(255, 255, 0, 0.2);
+    border-left-color: #ffff00;
+}
+
+.threat-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* AI Grid */
+.ai-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.ai-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.metric {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.metric h4 {
+    color: #00ff00;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+/* Logs */
+.logs-container {
+    max-width: 100%;
+}
+
+.log-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.log-content {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 1rem;
+    height: 400px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.log-entry {
+    margin-bottom: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 2px;
+}
+
+.log-entry.error {
+    color: #ff6666;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.log-entry.warning {
+    color: #ffff66;
+    background: rgba(255, 255, 0, 0.1);
+}
+
+.log-entry.info {
+    color: #66ff66;
+    background: rgba(0, 255, 0, 0.1);
+}
+
+/* Status Bar */
+.status-bar {
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid #333;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.status-left, .status-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.status-item {
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .dashboard-grid, .redteam-grid, .blueteam-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ai-metrics {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .nav-tabs {
+        padding: 0 1rem;
+        overflow-x: auto;
+    }
+    
+    .tab-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .status-bar {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .status-left, .status-right {
+        justify-content: center;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 255, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #00ff00;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Pulse Animation for Critical Items */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+/* ============= MEJORAS ADICIONALES ============= */
+
+/* Enhanced Input Focus Effects */
+.form-group input:active,
+.form-group select:active {
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}
+
+/* Better Button Active States */
+.action-btn:active,
+.scan-btn:active,
+.exploit-btn:active,
+.block-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Indicators with Glow */
+.status-online {
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+}
+
+.status-offline {
+    color: #ff0000;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+.status-warning {
+    color: #ffff00;
+    text-shadow: 0 0 8px #ffff00;
+}
+
+/* Improved Result Items Hover */
+.result-item:hover {
+    background: rgba(0, 255, 0, 0.15);
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+/* Better Threat Items Hover */
+.threat-item:hover {
+    transform: translateX(-3px);
+    box-shadow: -5px 0 15px rgba(255, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+/* Enhanced Card Effects */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Loading Spinner Enhancement */
+.loading {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Better Notification Styling */
+.notification-icon {
+    font-size: 1.2rem;
+}
+
+.notification-message {
+    flex: 1;
+    word-wrap: break-word;
+}
+
+/* Honeypot Item Enhancement */
+.honeypot-item:hover {
+    background: rgba(255, 165, 0, 0.2);
+    transform: scale(1.02);
+}
+
+/* Exploit Item Enhancement */
+.exploit-item:hover {
+    background: rgba(255, 100, 0, 0.15);
+    border-left: 3px solid #ff6600;
+}
+
+/* Improved Stat Items */
+.stat-item:hover {
+    background: rgba(0, 255, 0, 0.15);
+    transform: scale(1.05);
+}
+
+/* Better Log Entry Styling */
+.log-entry:hover {
+    opacity: 0.8;
+    padding-left: 0.5rem;
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+    outline: 2px solid #00ff00;
+    outline-offset: 2px;
+}
+
+/* Disabled State */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Selection Color */
+::selection {
+    background: rgba(0, 255, 0, 0.3);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: rgba(0, 255, 0, 0.3);
+    color: #ffffff;
+}

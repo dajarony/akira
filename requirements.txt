@@ -1,0 +1,44 @@
+﻿# Akira SASE Cyberwar MVP - Dependencies
+# Versiones fijas para estabilidad
+
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# AI Integration
+openai==1.10.0
+
+# Firebase Integration
+firebase-admin==6.2.0
+
+# Security & Network Tools
+python-nmap==0.7.1
+requests==2.31.0
+httpx==0.25.2
+dnspython==2.6.1
+python-whois==0.9.5
+
+# System monitoring
+psutil==5.9.8
+
+# Logging & Monitoring
+structlog==23.2.0
+colorama==0.4.6
+
+# Data Processing
+PyYAML==6.0.1
+python-multipart==0.0.6
+
+# Security & Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+slowapi==0.1.9
+ipaddress==1.0.23
+
+# Development & Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1

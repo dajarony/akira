@@ -1,0 +1,295 @@
+{
+  "summary": {
+    "total_tests": 19,
+    "success_rate": 21.052631578947366,
+    "authenticity_analysis": {},
+    "performance_metrics": {},
+    "failed_tests": [
+      {
+        "test": "Status - Status Base",
+        "success": false,
+        "duration_ms": 2064.92,
+        "timestamp": "2025-06-18T21:11:00.787966",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Status - Health Check",
+        "success": false,
+        "duration_ms": 2047.52,
+        "timestamp": "2025-06-18T21:11:02.835699",
+        "response_data": null,
+        "notes": "HTTP 401"
+      },
+      {
+        "test": "Status - System Metrics",
+        "success": false,
+        "duration_ms": 2059.04,
+        "timestamp": "2025-06-18T21:11:04.894866",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Offense - Network Scan",
+        "success": false,
+        "duration_ms": 2043.3,
+        "timestamp": "2025-06-18T21:11:06.938893",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Offense - Port Scan",
+        "success": false,
+        "duration_ms": 2063.52,
+        "timestamp": "2025-06-18T21:11:09.002610",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Offense - OSINT Domain Recon",
+        "success": false,
+        "duration_ms": 2052.57,
+        "timestamp": "2025-06-18T21:11:11.055390",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Offense - Email Harvesting",
+        "success": false,
+        "duration_ms": 2033.81,
+        "timestamp": "2025-06-18T21:11:13.089374",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Offense - Web Exploit Verification",
+        "success": false,
+        "duration_ms": 2044.77,
+        "timestamp": "2025-06-18T21:11:15.134351",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Defense - Firewall Rule Creation",
+        "success": false,
+        "duration_ms": 2049.53,
+        "timestamp": "2025-06-18T21:11:17.184420",
+        "response_data": null,
+        "notes": "HTTP 401"
+      },
+      {
+        "test": "Defense - Firewall Status",
+        "success": false,
+        "duration_ms": 2044.16,
+        "timestamp": "2025-06-18T21:11:19.228762",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Defense - Honeypot Deployment",
+        "success": false,
+        "duration_ms": 2034.23,
+        "timestamp": "2025-06-18T21:11:21.263194",
+        "response_data": null,
+        "notes": "HTTP 405"
+      },
+      {
+        "test": "Defense - Honeypot Status",
+        "success": false,
+        "duration_ms": 2064.45,
+        "timestamp": "2025-06-18T21:11:23.327922",
+        "response_data": null,
+        "notes": "HTTP 405"
+      },
+      {
+        "test": "Defense - Threat Detection Config",
+        "success": false,
+        "duration_ms": 2063.46,
+        "timestamp": "2025-06-18T21:11:25.391509",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Defense - Threat Detection Status",
+        "success": false,
+        "duration_ms": 2067.75,
+        "timestamp": "2025-06-18T21:11:27.459452",
+        "response_data": null,
+        "notes": "HTTP 404"
+      },
+      {
+        "test": "Performance - Concurrent Load",
+        "success": false,
+        "duration_ms": 0,
+        "timestamp": "2025-06-18T21:11:29.505736",
+        "response_data": null,
+        "notes": "No successful requests"
+      }
+    ]
+  },
+  "detailed_results": [
+    {
+      "test": "System Health Check",
+      "success": true,
+      "duration_ms": 2071.9,
+      "timestamp": "2025-06-18T21:10:52.571435",
+      "response_data": {
+        "name": "Akira SASE Cyberwar MVP",
+        "version": "1.0.0-MVP",
+        "architecture": "SUME + STDG",
+        "description": "Sistema h\u00edbrido de ciberseguridad ofensiva y defensiva",
+        "status": "operational",
+        "documentation": "/docs",
+        "health_check": "/status/health",
+        "authentication": "Bearer token required for all operations",
+        "ethical_use_only": true,
+        "contact": "security@akira-cyber.com"
+      },
+      "notes": "API respondiendo"
+    },
+    {
+      "test": "Documentation - Swagger UI",
+      "success": true,
+      "duration_ms": 2041.22,
+      "timestamp": "2025-06-18T21:10:54.613360",
+      "response_data": null,
+      "notes": "Disponible"
+    },
+    {
+      "test": "Documentation - ReDoc",
+      "success": true,
+      "duration_ms": 2038.76,
+      "timestamp": "2025-06-18T21:10:56.652390",
+      "response_data": null,
+      "notes": "Disponible"
+    },
+    {
+      "test": "Documentation - OpenAPI Schema",
+      "success": true,
+      "duration_ms": 2069.86,
+      "timestamp": "2025-06-18T21:10:58.722433",
+      "response_data": null,
+      "notes": "Disponible"
+    },
+    {
+      "test": "Status - Status Base",
+      "success": false,
+      "duration_ms": 2064.92,
+      "timestamp": "2025-06-18T21:11:00.787966",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Status - Health Check",
+      "success": false,
+      "duration_ms": 2047.52,
+      "timestamp": "2025-06-18T21:11:02.835699",
+      "response_data": null,
+      "notes": "HTTP 401"
+    },
+    {
+      "test": "Status - System Metrics",
+      "success": false,
+      "duration_ms": 2059.04,
+      "timestamp": "2025-06-18T21:11:04.894866",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Offense - Network Scan",
+      "success": false,
+      "duration_ms": 2043.3,
+      "timestamp": "2025-06-18T21:11:06.938893",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Offense - Port Scan",
+      "success": false,
+      "duration_ms": 2063.52,
+      "timestamp": "2025-06-18T21:11:09.002610",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Offense - OSINT Domain Recon",
+      "success": false,
+      "duration_ms": 2052.57,
+      "timestamp": "2025-06-18T21:11:11.055390",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Offense - Email Harvesting",
+      "success": false,
+      "duration_ms": 2033.81,
+      "timestamp": "2025-06-18T21:11:13.089374",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Offense - Web Exploit Verification",
+      "success": false,
+      "duration_ms": 2044.77,
+      "timestamp": "2025-06-18T21:11:15.134351",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Defense - Firewall Rule Creation",
+      "success": false,
+      "duration_ms": 2049.53,
+      "timestamp": "2025-06-18T21:11:17.184420",
+      "response_data": null,
+      "notes": "HTTP 401"
+    },
+    {
+      "test": "Defense - Firewall Status",
+      "success": false,
+      "duration_ms": 2044.16,
+      "timestamp": "2025-06-18T21:11:19.228762",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Defense - Honeypot Deployment",
+      "success": false,
+      "duration_ms": 2034.23,
+      "timestamp": "2025-06-18T21:11:21.263194",
+      "response_data": null,
+      "notes": "HTTP 405"
+    },
+    {
+      "test": "Defense - Honeypot Status",
+      "success": false,
+      "duration_ms": 2064.45,
+      "timestamp": "2025-06-18T21:11:23.327922",
+      "response_data": null,
+      "notes": "HTTP 405"
+    },
+    {
+      "test": "Defense - Threat Detection Config",
+      "success": false,
+      "duration_ms": 2063.46,
+      "timestamp": "2025-06-18T21:11:25.391509",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Defense - Threat Detection Status",
+      "success": false,
+      "duration_ms": 2067.75,
+      "timestamp": "2025-06-18T21:11:27.459452",
+      "response_data": null,
+      "notes": "HTTP 404"
+    },
+    {
+      "test": "Performance - Concurrent Load",
+      "success": false,
+      "duration_ms": 0,
+      "timestamp": "2025-06-18T21:11:29.505736",
+      "response_data": null,
+      "notes": "No successful requests"
+    }
+  ]
+}
