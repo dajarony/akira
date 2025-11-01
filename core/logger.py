@@ -31,6 +31,8 @@ from pathlib import Path
 from core.config import get_settings
 
 class AkiraLogger:
+    _configured = False  # Flag para evitar configuración múltiple
+
     def __init__(self):
         self.settings = get_settings()
         self.firebase_service = None  # Se inyecta después
@@ -38,15 +40,24 @@ class AkiraLogger:
     
     def _setup_logging(self):
         """Configura el sistema de logging estructurado"""
-        
-        # Configurar structlog
+
+        # Solo configurar una vez para evitar duplicación
+        if AkiraLogger._configured:
+            self.logger = structlog.get_logger("akira")
+            return
+
+        # Limpiar handlers existentes para evitar duplicación
+        root_logger = logging.getLogger()
+        root_logger.handlers.clear()
+
+        # Configurar structlog solo una vez
         structlog.configure(
             processors=[
                 structlog.stdlib.filter_by_level,
                 structlog.stdlib.add_logger_name,
                 structlog.stdlib.add_log_level,
                 structlog.stdlib.PositionalArgumentsFormatter(),
-                structlog.processors.TimeStamper(fmt="ISO"),
+                structlog.processors.TimeStamper(fmt="iso"),
                 structlog.processors.StackInfoRenderer(),
                 structlog.processors.format_exc_info,
                 structlog.processors.UnicodeDecoder(),
@@ -57,20 +68,24 @@ class AkiraLogger:
             wrapper_class=structlog.stdlib.BoundLogger,
             cache_logger_on_first_use=True,
         )
-        
+
         # Configurar logging estándar
         logging.basicConfig(
             level=getattr(logging, self.settings.log_level),
-            format='%(message)s'
+            format='%(message)s',
+            force=True  # Forzar reconfiguración si es necesario
         )
-        
+
         # Logger principal
         self.logger = structlog.get_logger("akira")
-        
+
         # Configurar handlers
         self._setup_file_handler()
         if self.settings.log_to_console:
             self._setup_console_handler()
+
+        # Marcar como configurado
+        AkiraLogger._configured = True
     
     def _setup_file_handler(self):
         """Configura el handler para archivo"""
