@@ -18,6 +18,7 @@ firebase-admin==6.2.0
 python-nmap==0.7.1
 requests==2.31.0
 httpx==0.25.2
+aiohttp==3.9.1
 dnspython==2.6.1
 python-whois==0.9.5
 
@@ -35,7 +36,6 @@ python-multipart==0.0.6
 # Security & Authentication
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-python-multipart==0.0.6
 slowapi==0.1.9
 ipaddress==1.0.23
 
