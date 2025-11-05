@@ -118,7 +118,7 @@ jobs:
 
       - name: Create test environment file
         run: |
-          cp .env.example .env
+          cp config/.env.example .env
           echo "API_SECRET_KEY=test-secret-key-32-chars-min" >> .env
           echo "JWT_SECRET_KEY=test-jwt-secret-key-64-chars-minimum-for-security" >> .env
 
